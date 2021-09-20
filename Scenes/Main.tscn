@@ -41,13 +41,13 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 18.1482, 16.6992 )
+extents = Vector2( 32.9749, 31.4237 )
 
 [sub_resource type="Gradient" id=1]
 
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
-width = 40
+width = 64
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 1 )
@@ -79,6 +79,9 @@ script = ExtResource( 2 )
 shape = SubResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/Buddy"]
-scale = Vector2( 1, 40 )
+scale = Vector2( 1, 64 )
 z_index = 7
 texture = SubResource( 2 )
+
+[node name="Particles2D" type="CPUParticles2D" parent="TileMap/Buddy"]
+emitting = false
